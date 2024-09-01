@@ -1,6 +1,5 @@
 const inputSlider = document.querySelector("[data-lengthSlider]");
 const lengthDisplay = document.querySelector("[data-lengthNumber]");
-
 const passwordDisplay = document.querySelector("[data-passwordDisplay]");
 const copyBtn = document.querySelector("[data-copy]");
 const copyMsg = document.querySelector("[data-copyMsg]");
@@ -13,21 +12,19 @@ const generateBtn = document.querySelector(".generateButton");
 const allCheckBox = document.querySelectorAll("input[type=checkbox]");
 const symbols = '~`!@#$%^&*()_-+={}[]|:;"<,>.?/';
 
-
 // Initial values
 let password = "";
 let passwordLength = 10;
 let checkCount = 0;
 handleSlider();
-//set strength circle color to grey
-setIndicator("#ccc")
 
+//set strength circle color
+setIndicator("#ccc")
 
 // Set password length
 function handleSlider() {
     inputSlider.value = passwordLength;
     lengthDisplay.innerText = passwordLength;
-
     const min = inputSlider.min;
     const max = inputSlider.max;
     inputSlider.style.backgroundSize = ( (passwordLength-min)*100/(max -min) ) + "% 100%";
@@ -101,7 +98,7 @@ function shufflePassword(array) {
     return array.join('');
 }
 
-// Update checkbox count and ensure password length meets criteria
+// Updating checkbox count and ensuring password length meets criteria
 function handleCheckBoxChange() {
     checkCount = 0;
     allCheckBox.forEach(checkbox => {
@@ -114,7 +111,7 @@ function handleCheckBoxChange() {
     }
 }
 
-// Attach event listeners
+// Attaching event listeners
 allCheckBox.forEach(checkbox => {
     checkbox.addEventListener('change', handleCheckBoxChange);
 });
@@ -144,7 +141,7 @@ generateBtn.addEventListener('click', () => {
     if (numberCheck.checked) funcArr.push(generateRandomNumber);
     if (symbolCheck.checked) funcArr.push(generateSymbol);
 
-    // Add at least one character from each selected type
+    // Adding at least one character from each selected type
     funcArr.forEach(func => password += func());
 
     // Fill the remaining length with random characters
