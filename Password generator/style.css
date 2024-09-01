@@ -13,11 +13,8 @@
     --lt-violet2: hsl(281, 89%, 26%);
     --vb-violet: hsl(285, 91%, 52%);
     --vb-violet2: hsl(290, 70%, 36%);
-
     --vb-yellow: hsl(52, 100%, 62%);
-
     --pl-white: hsl(0, 0%, 100%);
-
     --vb-cyan: hsl(176, 100%, 44%);
     --vb-cyan2: hsl(177, 92%, 70%);
     --dk-text: hsl(198, 20%, 13%);
@@ -47,8 +44,6 @@ h1 {
     line-height: 1.2; 
 }
 
-
-
 .display-container {
     position: relative;
     background-color: var(--dk-violet);
@@ -57,7 +52,6 @@ h1 {
     margin: 1rem 0;
     padding-top: 0.35rem;
 }
-
 
 .display {
     width: 100%;
@@ -99,25 +93,21 @@ h1 {
     border-bottom: 0.35rem solid var(--lt-violet2);
 }
 
-
 .length-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-
 .length-container p:nth-child(1) {
     color: var(--pl-white);
     font-size: 1.5rem;
 }
 
-
 .length-container p:nth-child(2) {
     color: var(--vb-yellow);
     font-size: 1.5rem;
 }
-
 
 .strength-container {
     display: flex;
@@ -126,7 +116,6 @@ h1 {
     margin-top: 1.75rem;
     margin-bottom: 2rem;
 }
-
 
 .strength-container p {
     color: var(--pl-white);
@@ -174,7 +163,6 @@ h1 {
 .check input:checked {
     background-color: var(--vb-cyan);
 }
-
 
 .check input:checked::before {
     content: '✔';  
